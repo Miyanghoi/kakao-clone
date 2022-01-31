@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+.screen-header {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--horizontal-space);
+    margin-bottom: 15px;
+    font-family: 'Nanum Pen Script', cursive;    
+    background: linear-gradient( to left, #DA15DE, #9514E0 );
+    
+  }
+  .screen-header__icons--a{
+    position: relative;
+  }
+  .screen-header__title {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
+  .screen-header__icons span {
+    margin-left: 25px;
+  }
+  
+  @keyframes scaleSch {
+    0% {
+      transform: none;
+    }
+    50% {
+      transform: scale( 1.5 );
+    }
+    100% {
+      transform: scale( 1.0 );
+    }
+  }
+  
+  @keyframes translateMus {
+    0% {
+      transform: none;
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: rotateZ(10px);
+    }
+  }
+  
+  @keyframes skewUser {
+    0% {
+      transform: none;
+    }
+    25% {
+      transform: skewX( 30deg );
+    }
+    50% {
+      transform: skewX( 0deg );
+    }
+    75% {
+      transform: skewX( -30deg );
+    }
+    100% {
+      transform: skewX( 0deg );
+    }
+  }
+
+  @keyframes rotateCog {
+    from {
+      transform: none;
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  .screen-header__icons .fa-search:hover {
+    animation: scaleSch 0.5s linear infinite;
+  }
+  .screen-header__icons .fa-user-plus:hover {
+    animation: skewUser 0.5s linear infinite;
+  }
+  .screen-header__icons .fa-music:hover {
+    animation: translateMus 0.5s linear infinite;
+  }
+  .screen-header__icons .fa-cog:hover {
+    animation: rotateCog 1s linear infinite;
+  }
+  .screen-header__icons .fa-comment-dots:hover {
+    animation: skewUser 0.5s linear infinite;
+  }
+
+.screen-header__icon-point{
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  border-radius: 2.5px;
+  position: absolute;
+  left: 1px;
+  top: -2px;
+}

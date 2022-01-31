@@ -1,0 +1,93 @@
+body{
+  background-color: #0E0621;
+  color: var(--bacic-fontcolor);    
+}
+
+@keyframes appearAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;    
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--stylefont2);
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
+  font-size: 25px;
+}
+
+#Login__img{  
+  height: 250px;
+  width: 420px;
+  position: relative;
+  top : -50px;
+  left: 40px;
+  border-radius: 60px;
+  animation: appearAnimation 2s ease-in-out infinite;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
+    margin-top: -50px;
+  }
+
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;  
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/*submit이라는 타입이 아닐때 발동시킨다.*/
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input:focus {
+  border-color: var(--basic);
+}
+
+/* 반대로 submit이란 타입일 때 발동시킴 */
+#login-form input[type="submit"] {
+  background-color: var(--basic);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+  font-family: var(--stylefont);  
+  color: pink;
+  text-shadow: 2px 2px 2px gray;
+  border: 2px solid var(--bacic-fontcolor);
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+  margin-bottom: 70px;
+}

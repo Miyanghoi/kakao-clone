@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcomo to K/DA Talk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>Luv Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>12:00</span>
+      </div>
+      <div class="status-bar__column">
+        <span>120%</span>        
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-heartbeat fa-lg"></i>
+      </div>
+    </div>
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">Welcome to <font color ="pink">K/DA</font> Talk</h1>
+        <p class="welcome-header__text">
+          If you have a <font color ="pink">K/DA</font> Account, <br>log in with your <font color ="orange">email</font> <br>or <font color ="orange">phone number</font>.
+        </p>
+    </header>
+    <div>
+      <img id = "Login__img" src = "img/login_img.jpg" />
+    </div>
+  
+      <form action="friends.html" method="get" id="login-form">
+        <input name="username" type="text" placeholder="Email or phone number" required />
+        <input name="password" type="password" placeholder="Password" required/>
+        <input type="submit" value="Log In" />
+        <a href="#">Find K/DA Account or Password</a>
+      </form>
+        
+    
+    <div id="no-mobile">
+      <img id = "no-mobile_logo" src = "img/logo.png"/>      
+      <span id = "no-mobile_text">우리와 함께 하고 싶다면, 창을 줄여봐.</span>     
+    </div>  
+    
+
+    <script
+    src="https://kit.fontawesome.com/6478f529f2.js"
+    crossorigin="anonymous"></script>
+  </body>
+</html>

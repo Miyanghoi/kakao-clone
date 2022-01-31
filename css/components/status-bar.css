@@ -1,0 +1,56 @@
+
+@keyframes shakeheartAnimation {
+  10%, 90% {
+    transform: translate3d(0, -1px, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(0, 2px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+.status-bar {
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 3px;
+    background-color: var(--basic);
+    color: var(--bacic-fontcolor);
+    font-family: var(--stylefont);
+    font-size: 20px;
+}
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+}
+
+.status-bar__column .fa-heartbeat {
+  animation: shakeheartAnimation 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;      
+}

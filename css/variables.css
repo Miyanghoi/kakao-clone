@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Pacifico&family=Rubik:wght@300;500&family=Shadows+Into+Light&display=swap');
+
+:root {
+    --basic: #03001D;
+    --bacic-fontcolor: rgb(250, 236, 253);
+    --stylefont : 'Pacifico', cursive;
+    --stylefont2 : 'Shadows Into Light', cursive;
+    --horizontal-space: 25px;
+    --main-border: 1px solid white;
+  }

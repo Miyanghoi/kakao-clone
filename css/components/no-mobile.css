@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Rubik:wght@300;500&display=swap');
+
+@keyframes shakelogoAnimation {
+  0%{
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  25%{
+    transform: translateY(25px);
+    opacity: 1;
+  }
+    
+  50%{
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+@keyframes shaketextAnimation {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+#no-mobile {
+    position: absolute;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-image: url('../../img/kda_bg.jpg');
+    background-position: center;    
+    background-color: var(--basic);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    top: 0;    
+  }
+
+  #no-mobile_logo{    
+    position:absolute;
+    top : 10px;    
+    animation: shakelogoAnimation 1.3s ease-in-out infinite;
+  }
+  #no-mobile_text{
+    position:absolute;    
+    top : 80px;
+    color : rgb(250, 236, 253);
+    font-family: 'East Sea Dokdo', cursive;
+    font-weight: 300;
+    font-size: 40px;
+    animation: shaketextAnimation 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;      
+  }
+
+  @media screen and (max-width: 645px) {
+    #no-mobile {
+      display: none;
+    }
+  }
